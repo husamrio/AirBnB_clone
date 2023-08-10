@@ -63,4 +63,4 @@ $
 - OS: Ubuntu 20.04 LTS
 
   ## Authors
-Hussein Abdullahi [![M](https://upload.wikimedia.org/wikipedia/fr/thumb/c/c8/Twitter_Bird.svg/30px-Twitter_Bird.svg.png)](https://twitter.com/husamrio)
+Hussein Abdullahi [![M](https://upload.wikimedia.org/wikipedia/fr/thumb/c/c8/[[File:X logo 2023.svg|thumb|X logo 2023]])](https://twitter.com/husamrio)
