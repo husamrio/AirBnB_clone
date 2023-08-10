@@ -2,6 +2,8 @@
 ## Description
 
 The first stage of creating an Airbnb clone is the console. This repository contains a command interpreter, as well as several classes, including the BaseModel class and its subclasses: Amenity, City, State, Place, and Review. The command interpreter functions like a shell, allowing users to input commands and manipulate object instances
+methods and attributes.
+
 ## Command Interpreter Usage
 ********************************************************************************
 | Commands |  Sample Usage  | Functionality  |
