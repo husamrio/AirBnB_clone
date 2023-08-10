@@ -63,4 +63,4 @@ $
 - OS: Ubuntu 20.04 LTS
 
   ## Authors
-Hussein Abdullahi [![M](https://upload.wikimedia.org/wikipedia/fr/thumb/c/c8/[[File:X logo 2023.svg|thumb|X logo 2023]])](https://twitter.com/husamrio)
+Hussein Abdullahi [![M](https://upload.wikimedia.org/wikipedia/fr/thumb/c/c8/File:X logo 2023.svg|X logo 2023])](https://twitter.com/husamrio)
