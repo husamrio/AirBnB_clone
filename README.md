@@ -6,7 +6,7 @@ This is the first phase of the Airbnb Clone: the console. This repository holds 
 ********************************************************************************
 | Commands |  Sample Usage  | Functionality  |
 |----------|----------------|----------------|
-| help | help | displays all commands available |
+|` help ` | help | displays all commands available |
 | create | create <class> | creates new object (ex. a new User, Place) |
 | update | User.update('123', {'name' : 'Greg_n_Mel'}) | updates attribute of an object |
 | destroy |  User.destroy('123') | destroys specified object |
