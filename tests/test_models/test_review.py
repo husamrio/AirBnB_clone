@@ -16,7 +16,7 @@ class TestReview(unittest.TestCase):
             os.remove("file.json")
         except FileNotFoundError:
             pass
-    
+
     @classmethod
     def setUpClass(cls):
         cls.rev1 = Review()
@@ -31,12 +31,12 @@ class TestReview(unittest.TestCase):
         self.assertTrue('place_id' in self.rev1.__dict__)
         self.assertTrue('text' in self.rev1.__dict__)
         self.assertTrue('user_id' in self.rev1.__dict__)
-    
+
     def test_attributes_are_strings(self):
         self.assertEqual(type(self.rev1.text), str)
         self.assertEqual(type(self.rev1.place_id), str)
         self.assertEqual(type(self.rev1.user_id), str)
-    
+
     def test_checking_for_functions(self):
         self.assertIsNotNone(Review.__doc__)
 
@@ -49,7 +49,7 @@ class TestReview(unittest.TestCase):
 
     def test_to_dict(self):
         self.assertEqual('to_dict' in dir(self.rev1), True)
-    
+
     def test_style_check(self):
         """
         Tests pep8 style
@@ -58,6 +58,6 @@ class TestReview(unittest.TestCase):
         p = style.check_files(['models/review.py'])
         self.assertEqual(p.total_errors, 0, "fix pep8")
 
-    
+
 if __name__ == "__main__":
     unittest.main()

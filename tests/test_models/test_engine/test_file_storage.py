@@ -22,12 +22,13 @@ class TestFileStorage(unittest.TestCase):
     @classmethod
     def teardown(cls):
         del cls.rev1
+
     def teardown(self):
         try:
             os.remove("file.json")
         except:
             pass
-    
+
     @classmethod
     def setUpClass(cls):
         cls.rev1 = Review()
@@ -49,8 +50,8 @@ class TestFileStorage(unittest.TestCase):
         with open("file.json", "r") as r:
             for line in r:
                 self.assertEqual(line, "{}")
-        self.assertIs(a_storage.reload(), None)    
-    
+        self.assertIs(a_storage.reload(), None)
+
     def test_all(self):
         """
         Tests method: all (returns dictionary <class>.<id> : <obj instance>)
@@ -59,8 +60,8 @@ class TestFileStorage(unittest.TestCase):
         instances_dic = storage.all()
         self.assertIsNotNone(instances_dic)
         self.assertEqual(type(instances_dic), dict)
-        self.assertIs(instances_dic, storage._FileStorage__objects)    
-    
+        self.assertIs(instances_dic, storage._FileStorage__objects)
+
     def test_style_check(self):
         """
         Tests pep8 style
@@ -80,5 +81,5 @@ class TestFileStorage(unittest.TestCase):
         hussein.name = "Hussein"
         m_storage.new(hussein)
         key = hussein.__class__.__name__ + "." + str(hussein.id)
-        #print(instances_dic[key])
+        # print(instances_dic[key])
         self.assertIsNotNone(instances_dic[key])

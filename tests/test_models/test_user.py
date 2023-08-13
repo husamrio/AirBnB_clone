@@ -16,7 +16,7 @@ class TestUser(unittest.TestCase):
             os.remove("file.json")
         except FileNotFoundError:
             pass
-    
+
     @classmethod
     def setUpClass(cls):
         cls.my_user = User()
@@ -36,7 +36,7 @@ class TestUser(unittest.TestCase):
 
     def test_checking_for_functions(self):
         self.assertIsNotNone(User.__doc__)
-    
+
     def test_style_check(self):
         """
         Tests pep8 style
@@ -61,6 +61,6 @@ class TestUser(unittest.TestCase):
         self.assertEqual(type(self.my_user.first_name), str)
         self.assertEqual(type(self.my_user.first_name), str)
 
-    
+
 if __name__ == "__main__":
     unittest.main()

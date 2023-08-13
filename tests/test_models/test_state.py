@@ -16,7 +16,7 @@ class TestState(unittest.TestCase):
             os.remove("file.json")
         except FileNotFoundError:
             pass
-    
+
     @classmethod
     def setUpClass(cls):
         cls.state1 = State()
@@ -27,7 +27,7 @@ class TestState(unittest.TestCase):
         self.assertTrue('created_at' in self.state1.__dict__)
         self.assertTrue('updated_at' in self.state1.__dict__)
         self.assertTrue('name' in self.state1.__dict__)
-    
+
     def test_checking_for_functions(self):
         self.assertIsNotNone(State.__doc__)
 
@@ -46,12 +46,12 @@ class TestState(unittest.TestCase):
         self.assertEqual(type(self.state1.name), str)
 
     def test_to_dict(self):
-        self.assertEqual('to_dict' in dir(self.state1), True) 
-    
+        self.assertEqual('to_dict' in dir(self.state1), True)
+
     def test_save(self):
         self.state1.save()
         self.assertNotEqual(self.state1.created_at, self.state1.updated_at)
 
-    
+
 if __name__ == "__main__":
     unittest.main()

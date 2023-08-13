@@ -16,7 +16,7 @@ class TestCity(unittest.TestCase):
             os.remove("file.json")
         except FileNotFoundError:
             pass
-    
+
     @classmethod
     def setUpClass(cls):
         cls.city1 = City()
@@ -29,13 +29,13 @@ class TestCity(unittest.TestCase):
         self.assertTrue('updated_at' in self.city1.__dict__)
         self.assertTrue('state_id' in self.city1.__dict__)
         self.assertTrue('name' in self.city1.__dict__)
-    
+
     def test_checking_for_functions(self):
         self.assertIsNotNone(City.__doc__)
-    
+
     def test_is_subclass(self):
         self.assertTrue(issubclass(self.city1.__class__, BaseModel), True)
-    
+
     def test_style_check(self):
         """
         Tests pep8 style
@@ -55,6 +55,6 @@ class TestCity(unittest.TestCase):
         self.assertEqual(type(self.city1.name), str)
         self.assertEqual(type(self.city1.state_id), str)
 
-    
+
 if __name__ == "__main__":
     unittest.main()

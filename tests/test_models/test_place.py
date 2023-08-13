@@ -16,7 +16,7 @@ class TestPlace(unittest.TestCase):
             os.remove("file.json")
         except FileNotFoundError:
             pass
-    
+
     @classmethod
     def setUpClass(cls):
         cls.place1 = Place()
@@ -50,10 +50,10 @@ class TestPlace(unittest.TestCase):
 
     def test_checking_for_functions(self):
         self.assertIsNotNone(Place.__doc__)
-    
+
     def test_is_subclass(self):
         self.assertTrue(issubclass(self.place1.__class__, BaseModel), True)
-    
+
     def test_attributes_are_strings(self):
         self.assertEqual(type(self.place1.city_id), str)
         self.assertEqual(type(self.place1.user_id), str)
@@ -66,7 +66,7 @@ class TestPlace(unittest.TestCase):
         self.assertEqual(type(self.place1.latitude), float)
         self.assertEqual(type(self.place1.longitude), float)
         self.assertEqual(type(self.place1.amenity_ids), list)
-    
+
     def test_style_check(self):
         """
         Tests pep8 style
@@ -74,14 +74,14 @@ class TestPlace(unittest.TestCase):
         style = pep8.StyleGuide(quiet=True)
         p = style.check_files(['models/place.py'])
         self.assertEqual(p.total_errors, 0, "fix pep8")
-    
+
     def test_to_dict(self):
         self.assertEqual('to_dict' in dir(self.place1), True)
-    
+
     def test_save(self):
         self.place1.save()
         self.assertNotEqual(self.place1.created_at, self.place1.updated_at)
 
-    
+
 if __name__ == "__main__":
     unittest.main()

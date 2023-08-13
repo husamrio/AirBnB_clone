@@ -4,9 +4,8 @@ from datetime import datetime
 import models
 
 
-
 """
- BaseModel Module 
+ BaseModel Module
 Parent of all classes
 """
 
@@ -27,10 +26,10 @@ class BaseModel():
         """
         return ('[{}] ({}) {}'.
                 format(self.__class__.__name__, self.id, self.__dict__))
-    
+
     def __init__(self, *args, **kwargs):
         """
-         attributes Initialize: dates created/updated random uuid, 
+         attributes Initialize: dates created/updated random uuid,
 
         """
         if kwargs:
@@ -75,4 +74,4 @@ class BaseModel():
         Update instance with updated time & save to serialized file
         """
         self.updated_at = datetime.now()
-        models.storage.save()  
+        models.storage.save()

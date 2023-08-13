@@ -17,7 +17,7 @@ class TestBaseModel(unittest.TestCase):
             os.remove("file.json")
         except FileNotFoundError:
             pass
-    
+
     @classmethod
     def setUpClass(cls):
         cls.base1 = BaseModel()
@@ -33,10 +33,10 @@ class TestBaseModel(unittest.TestCase):
         self.assertIsNotNone(BaseModel.__doc__)
         self.assertIsNotNone(BaseModel.save.__doc__)
         self.assertIsNotNone(BaseModel.to_dict.__doc__)
-    
+
     def test_init(self):
         self.assertTrue(isinstance(self.base1, BaseModel))
-    
+
     def test_style_check(self):
         """
         Tests pep8 style

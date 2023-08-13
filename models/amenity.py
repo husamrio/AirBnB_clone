@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-class Module Amenity 
+class Module Amenity
 """
 from models.base_model import BaseModel
 
 
 class Amenity(BaseModel):
     """
-     BaseModel Inherited from 
+     BaseModel Inherited from
      class Public attribute:
         name: (str)
     """

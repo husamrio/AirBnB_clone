@@ -24,7 +24,7 @@ class FileStorage:
         if obj:
             key = '{}.{}'.format(obj.__class__.__name__, obj.id)
             self.__objects[key] = obj
-    
+
     def save(self):
         '''Save obj dictionaries to json file'''
         my_dict = {}
@@ -36,7 +36,7 @@ class FileStorage:
             my_dict[key] = obj.to_dict()
         with open(self.__file_path, 'w') as f:
             json.dump(my_dict, f)
-    
+
     def reload(self):
         '''If json file exists, convert obj dicts back to instances'''
         try:
@@ -47,7 +47,7 @@ class FileStorage:
                 self.__objects[key] = obj
         except FileNotFoundError:
             pass
-    
+
     def all(self):
         '''Return dictionary of <class>.<id> : object instance'''
-        return self.__objects   
+        return self.__objects
