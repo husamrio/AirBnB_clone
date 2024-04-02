@@ -1,0 +1,232 @@
+:root {
+    /* Define custom CSS variables */
+    --gradient: linear-gradient(
+      180deg,
+      rgba(45, 112, 125, 0.73) 0%, /* Adjusted color values */
+      #163e92 100%
+    );
+    --dark: #001747;
+    --grey: #b1bacb;
+    --grey-border: rgba(210, 210, 210, 0.75);
+    --grey-light: #eeeeee;
+    --grey-dark: #405175; /* Corrected variable name */
+    --blue: #2d70fd;
+    --green: #00d8a7;
+    --white: #ffffff;
+  }
+  
+  body {
+    /* Body styles */
+    background: var(--gradient); /* Background gradient */
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .btn {
+    /* Button styles */
+    color: var(--white);
+    font-size: 1.1rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.3rem;
+    background-color: var(--blue);
+    border: none;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+  }
+  
+  /* Reset margins for headings and paragraphs */
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
+  
+  /* Todo Container */
+  .todo {
+    /* Todo container styles */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 2rem;
+    background: var(--white);
+    padding: 3rem;
+    height: 50%;
+    width: 60%;
+    box-shadow: 0 1rem 3rem 1rem rgba(0, 23, 71, 0.15);
+    max-width: 30rem;
+  }
+  
+  h2 {
+    /* Heading 2 styles */
+    text-transform: uppercase;
+    height: 3rem;
+    color: var(--dark);
+    text-align: center;
+  }
+  
+  .input {
+    /* Input container styles */
+    position: relative;
+    display: flex;
+  }
+  
+  .input-field {
+    /* Input field styles */
+    width: 100%;
+    border: 0.06rem solid #d2d2d2bf;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    font-size: 1rem;
+  }
+  
+  input[type="text"]::placeholder {
+    /* Input placeholder styles */
+    color: var(--grey);
+  }
+  
+  .todo-container {
+    /* Todo container styles */
+    display: flex;
+    gap: 1rem;
+  }
+  
+  ul {
+    /* Unordered list styles */
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+  }
+  
+  li {
+    /* List item styles */
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.3rem;
+  }
+  
+  #todoList p {
+    /* Todo list paragraph styles */
+    display: flex;
+    gap: 1rem;
+    color: var(--dark);
+    align-items: center;
+  }
+  
+  #todoList .disabled {
+    /* Disabled todo styles */
+    color: #8f98a8;
+  }
+  
+  .disabled {
+    /* Disabled styles */
+    display: flex;
+    text-decoration: line-through;
+  }
+  
+  input[type="checkbox"] {
+    /* Checkbox styles */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]::before {
+    /* Checkbox icon styles */
+    content: "\2713";
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.7rem;
+    text-align: center;
+    border: 0.06rem solid var(--grey-border);
+    border-radius: 50%;
+    color: transparent;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    /* Checked checkbox styles */
+    color: var(--white);
+    background-color: var(--green);
+    border: 0.06rem solid var(--green);
+    border-radius: 50%;
+  }
+  
+  .counter {
+    /* Counter styles */
+    border: 0.06rem solid var(--grey-light);
+  }
+  
+  .counter-container {
+    /* Counter container styles */
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    color: var(--grey);
+  }
+  
+  .counter-container p {
+    /* Counter paragraph styles */
+    align-self: center;
+  }
+  
+  .counter-container button {
+    /* Counter button styles */
+    border: none;
+    background-color: transparent;
+    color: var(--grey);
+    font-size: 1rem;
+  }
+  
+  .footer {
+    /* Footer styles */
+    display: flex;
+    gap: 1.8rem;
+    background-color: var(--white);
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+  }
+  
+  .made-by,
+  .author {
+    /* Author styles */
+    font-size: 0.9rem;
+  }
+  
+  .made-by {
+    /* Made by styles */
+    color: var(--grey-dark);
+  }
+  
+  .author {
+    /* Author styles */
+    color: var(--blue);
+    font-weight: bold;
+  }
+  
+  .scroll {
+    /* Scrollbar styles */
+    height: 15rem;
+    scrollbar-width: thin;
+  }
+  
+  .scroll::-webkit-scrollbar {
+    /* Webkit scrollbar styles */
+    width: 0.6rem;
+  }
+  
+  .scroll::-webkit-scrollbar-thumb {
+    /* Webkit scrollbar thumb styles */
+    background-color: var(--blue);
+    border-radius: 0.5rem;
+  }
+  
+  .scroll::-webkit-scrollbar-track {
+    /* Webkit scrollbar track styles */
+    display: none;
+  }
+  
